@@ -1,11 +1,11 @@
 import React from "react";
-import Login from "../pages/loginPanel/login/Login";
+import Home from "../pages/home/Home";
 
 const Layout = () => {
   return (
     <div>
       <div>Layout of Application</div>;
-      <Login />
+      <Home />
     </div>
   );
 };
