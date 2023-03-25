@@ -1,11 +1,10 @@
 import React from "react";
-import Login from "../pages/loginPanel/login/Login";
+import Navbar from "../navbar/Navbar";
 
 const Layout = () => {
   return (
     <div>
-      <div>Layout of Application</div>;
-      <Login />
+      <Navbar />
     </div>
   );
 };
