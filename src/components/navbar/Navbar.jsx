@@ -1,7 +1,7 @@
 import React from "react";
 import "./navbar.scss";
-import logo from "../../assets/images_chitchat/logo_t.png";
-import user from "../../assets/images_sanju/others/profile.jpg";
+import logo from "../../assets/images/chitchat/logo_t.png";
+import user from "../../assets/images/other/profile.jpg";
 import SearchIcon from "@mui/icons-material/Search";
 import PersonIcon from "@mui/icons-material/Person";
 import ChatBubbleIcon from "@mui/icons-material/ChatBubble";

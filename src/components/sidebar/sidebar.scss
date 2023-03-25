@@ -31,25 +31,6 @@
       padding: 0;
       margin: 0;
       list-style: none;
-
-      .sidebarFriend {
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-        cursor: pointer;
-
-        .sidebarFriendImg {
-          width: 40px;
-          height: 40px;
-          object-fit: cover;
-          border-radius: 50%;
-          margin-right: 20px;
-        }
-        .sidebarFriendName {
-          font-weight: 500;
-          color: black;
-        }
-      }
     }
   }
 }

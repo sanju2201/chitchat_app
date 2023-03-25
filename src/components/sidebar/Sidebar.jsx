@@ -10,11 +10,14 @@ import StorefrontIcon from "@mui/icons-material/Storefront";
 import EventIcon from "@mui/icons-material/Event";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
-import friend1 from "../../assets/images_sanju//person/friend1.jpg";
-import friend2 from "../../assets/images_sanju//person/friend2.jpg";
-import friend3 from "../../assets/images_sanju//person/friend3.jpg";
-import friend4 from "../../assets/images_sanju//person/friend4.jpg";
-import friend5 from "../../assets/images_sanju//person/friend5.jpg";
+import friend1 from "../../assets/images/person/friend1.jpg";
+import friend2 from "../../assets/images//person/friend2.jpg";
+import friend3 from "../../assets/images/person/friend3.jpg";
+import friend4 from "../../assets/images/person/friend4.jpg";
+import friend5 from "../../assets/images/person/friend5.jpg";
+import Friends from "../friends/Friends";
+import { Users } from "../../assets/data/data";
+console.log(Users);
 
 const Sidebar = () => {
   return (
@@ -33,26 +36,12 @@ const Sidebar = () => {
         <hr className="sidebarHr" />
 
         <ul className="sidebarFriendList">
-          <li className="sidebarFriend">
-            <img src={friend1} alt="friend1" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">Sam Parker</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src={friend2} alt="friend2" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">Sam Parker</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src={friend3} alt="friend3" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">Sam Parker</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src={friend4} alt="friend4" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">Sam Parker</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src={friend5} alt="friend5" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">Sam Parker</span>
-          </li>
+          {}
+          <Friends friend={friend1} name="Samuel Moses" />
+          <Friends friend={friend2} name="Suzen" />
+          <Friends friend={friend3} name="Molisa" />
+          <Friends friend={friend4} name="Alfred" />
+          <Friends friend={friend5} name="Shine jhon" />
         </ul>
       </div>
     </div>
