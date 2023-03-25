@@ -1,11 +1,10 @@
 import React from "react";
-import Home from "../pages/home/Home";
+import Navbar from "../navbar/Navbar";
 
 const Layout = () => {
   return (
     <div>
-      <div>Layout of Application</div>;
-      <Home />
+      <Navbar />
     </div>
   );
 };
