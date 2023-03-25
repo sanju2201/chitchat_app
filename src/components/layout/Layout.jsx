@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "../navbar/Navbar";
+import Home from "../pages/home/Home";
 
 const Layout = () => {
   return (
     <div>
-      <Navbar />
+      <Home />
     </div>
   );
 };
