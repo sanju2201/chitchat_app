@@ -10,11 +10,6 @@ import StorefrontIcon from "@mui/icons-material/Storefront";
 import EventIcon from "@mui/icons-material/Event";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
-import friend1 from "../../assets/images/person/friend1.jpg";
-import friend2 from "../../assets/images//person/friend2.jpg";
-import friend3 from "../../assets/images/person/friend3.jpg";
-import friend4 from "../../assets/images/person/friend4.jpg";
-import friend5 from "../../assets/images/person/friend5.jpg";
 import Friends from "../friends/Friends";
 import { Users } from "../../assets/data/data";
 console.log(Users);
@@ -36,12 +31,9 @@ const Sidebar = () => {
         <hr className="sidebarHr" />
 
         <ul className="sidebarFriendList">
-          {}
-          <Friends friend={friend1} name="Samuel Moses" />
-          <Friends friend={friend2} name="Suzen" />
-          <Friends friend={friend3} name="Molisa" />
-          <Friends friend={friend4} name="Alfred" />
-          <Friends friend={friend5} name="Shine jhon" />
+          {Users.map((user) => (
+            <Friends key={user.id} user={user} />
+          ))}
         </ul>
       </div>
     </div>

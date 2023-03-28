@@ -16,3 +16,11 @@
     color: black;
   }
 }
+
+// Responsiveness
+
+@media only screen and (max-width: 992px) {
+  .friendName {
+    display: none;
+  }
+}
