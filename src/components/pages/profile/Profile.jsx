@@ -2,7 +2,10 @@ import React from "react";
 import Navbar from "../../navbar/Navbar";
 import Sidebar from "../../sidebar/Sidebar";
 import "./profile.scss";
-import ProfileCover from "../../../assets/images/profilebackground/back1.jpg";
+import profileCover from "../../../assets/images/profilebackground/back4.jpg";
+import profile from "../../../assets/images/person/friend6.jpg";
+import Feed from "../../feed/Feed";
+import Rightbar from "../../rightbar/Rightbar";
 
 const Profile = () => {
   return (
@@ -13,10 +16,18 @@ const Profile = () => {
         <div className="profileRight">
           <div className="profileRightTop">
             <div className="profileCover">
-              <img src={ProfileCover} alt="" className="profileCoverImg" />
+              <img src={profileCover} alt="" className="profileCoverImg" />
+              <img src={profile} alt="" className="profileUserImg" />
+            </div>
+            <div className="profileInfo">
+              <h4 className="profileInfoName"> Sam Junior</h4>
+              <span className="profileInfoDes">Full Stack Developer</span>
             </div>
           </div>
-          <div className="profileRightBottom"></div>
+          <div className="profileRightBottom">
+            <Feed />
+            <Rightbar profile />
+          </div>
         </div>
       </div>
     </div>
