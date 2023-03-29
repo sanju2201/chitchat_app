@@ -2,7 +2,14 @@ import React from "react";
 import "./post.scss";
 import { Users } from "../../assets/data/data";
 import { IconButton } from "@mui/material";
-import { Favorite, MoreVert, ThumbUp } from "@mui/icons-material";
+import {
+  ChatBubbleOutlineOutlined,
+  Favorite,
+  MoreVert,
+  ShareOutlined,
+  ThumbUp,
+  ThumbUpAltOutlined,
+} from "@mui/icons-material";
 
 const Post = ({ post }) => {
   return (
@@ -43,6 +50,21 @@ const Post = ({ post }) => {
             <span className="postCommentText">
               {post.comment} . coments . share
             </span>
+          </div>
+        </div>
+        <hr className="footerHr" />
+        <div className="postBottomFooter">
+          <div className="postBottomFooterItem">
+            <ThumbUpAltOutlined className="footerIcon" />
+            <span className="footerText">Like</span>
+          </div>
+          <div className="postBottomFooterItem">
+            <ChatBubbleOutlineOutlined className="footerIcon" />
+            <span className="footerText">Comment</span>
+          </div>
+          <div className="postBottomFooterItem">
+            <ShareOutlined className="footerIcon" />
+            <span className="footerText">Share</span>
           </div>
         </div>
       </div>

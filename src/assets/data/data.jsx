@@ -65,13 +65,13 @@ export const Users = [
     email: "Chaim_McDermott@dana.io",
     profilePicture: friend3,
   },
-  {
-    id: 5,
-    name: "Clementina Sean",
-    username: "Alexis",
-    email: "Rey.Padberg@karina.biz",
-    profilePicture: friend20,
-  },
+  // {
+  //   id: 5,
+  //   name: "Clementina Sean",
+  //   username: "Alexis",
+  //   email: "Rey.Padberg@karina.biz",
+  //   profilePicture: friend20,
+  // },
 ];
 
 export const Usersonline = [
@@ -80,7 +80,7 @@ export const Usersonline = [
     name: "Leanne Graham",
     username: "Gloria",
     email: "Sincere@april.biz",
-    profilePicture: friend6,
+    profilePicture: friend20,
   },
   {
     id: 2,

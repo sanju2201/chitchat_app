@@ -81,5 +81,31 @@
         }
       }
     }
+    .footerHr {
+      margin: 20px 0;
+      background: rgb(177, 177, 177);
+      height: 1.5px;
+    }
+    .postBottomFooter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .postBottomFooterItem {
+        display: flex;
+        align-items: center;
+        padding: 7px;
+        cursor: pointer;
+
+        .footerIcon {
+          color: #333;
+          font-size: 30px;
+          margin-right: 10px;
+        }
+        .footerText {
+          font-weight: 500;
+        }
+      }
+    }
   }
 }
