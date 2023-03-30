@@ -6,6 +6,7 @@ import profileCover from "../../../assets/images/profilebackground/back4.jpg";
 import profile from "../../../assets/images/person/friend6.jpg";
 import editProfile from "../../../assets/images/other/DefaultProfile.jpg";
 import { DriveFolderUploadOutlined } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 const EditProfile = () => {
   return (
@@ -80,9 +81,11 @@ const EditProfile = () => {
                     <label htmlFor="country">Country: </label>
                     <input type="text" id="country" placeholder="India" />
                   </div>
-                  <button type="submit" className="updateProfile">
-                    Update Profile
-                  </button>
+                  <Link to={"/profile/userId"}>
+                    <button type="submit" className="updateProfile">
+                      Update Profile
+                    </button>
+                  </Link>
                 </form>
               </div>
             </div>

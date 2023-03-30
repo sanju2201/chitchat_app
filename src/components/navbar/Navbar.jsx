@@ -6,14 +6,17 @@ import SearchIcon from "@mui/icons-material/Search";
 import PersonIcon from "@mui/icons-material/Person";
 import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div className="navbarContainer">
       <div className="navbarLeft">
         <div className="logo">
-          <img src={logo} alt="logo" />
-          <span className="name">chitChat</span>
+          <Link to={"/"} style={{ textDecoration: "none" }} className="navLink">
+            <img src={logo} alt="logo" />
+            <span className="name">chitChat</span>
+          </Link>
         </div>
       </div>
       <div className="navbarCenter">
@@ -45,7 +48,9 @@ const Navbar = () => {
             <span className="navbarIconBadge">2</span>
           </div>
         </div>
-        <img src={user} alt="user profile" className="navbarImg" />
+        <Link to={"/profile/userId"}>
+          <img src={user} alt="user profile" className="navbarImg" />
+        </Link>
       </div>
     </div>
   );

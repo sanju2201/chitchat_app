@@ -10,6 +10,7 @@ import {
   ThumbUp,
   ThumbUpAltOutlined,
 } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 const Post = ({ post }) => {
   return (
@@ -17,14 +18,16 @@ const Post = ({ post }) => {
       <div className="postWrapper">
         <div className="postTop">
           <div className="postTopLeft">
-            <img
-              src={
-                Users.filter((user) => user.id === post.userId)[0]
-                  .profilePicture
-              }
-              alt=""
-              className="postProfileImg"
-            />
+            <Link to={"/profile/userId"}>
+              <img
+                src={
+                  Users.filter((user) => user.id === post.userId)[0]
+                    .profilePicture
+                }
+                alt=""
+                className="postProfileImg"
+              />
+            </Link>
             <span className="postUsername">
               {Users.filter((user) => user.id === post.userId)[0].username}
             </span>

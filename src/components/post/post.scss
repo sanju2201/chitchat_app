@@ -96,6 +96,11 @@
         align-items: center;
         padding: 7px;
         cursor: pointer;
+        border-radius: 5px;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.3);
+        }
 
         .footerIcon {
           color: #333;

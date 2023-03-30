@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./sidebar.scss";
 import MenuItem from "../menuItem/MenuItem";
 import DynamicFeedIcon from "@mui/icons-material/DynamicFeed";
@@ -10,11 +10,14 @@ import StorefrontIcon from "@mui/icons-material/Storefront";
 import EventIcon from "@mui/icons-material/Event";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
+import LightModeIcon from "@mui/icons-material/LightMode";
 import Friends from "../friends/Friends";
 import { Users } from "../../assets/data/data";
+import { DarkModeContext } from "../../context/darkModeContext";
 console.log(Users);
 
 const Sidebar = () => {
+  const { darkMode, dispatch } = useContext(DarkModeContext);
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
@@ -25,7 +28,12 @@ const Sidebar = () => {
         <MenuItem Icon={<BookmarkIcon />} text="Bookmarks" />
         <MenuItem Icon={<StorefrontIcon />} text="Marketplace" />
         <MenuItem Icon={<EventIcon />} text="Events" />
-        <MenuItem Icon={<DarkModeIcon />} text="Theme" />
+        <span onClick={() => dispatch({ type: "TOGGLE" })}>
+          <MenuItem
+            Icon={darkMode ? <LightModeIcon /> : <DarkModeIcon />}
+            text={darkMode ? "Light" : "Dark"}
+          />
+        </span>
         <MenuItem Icon={<ExitToAppIcon />} text="Logout" />
         <button className="sidebarButton">Show More</button>
         <hr className="sidebarHr" />

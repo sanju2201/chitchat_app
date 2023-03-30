@@ -2,13 +2,16 @@ import React from "react";
 import "./profileRightBar.scss";
 import { Usersonline } from "../../assets/data/data";
 import Following from "../following/Following";
+import { Link } from "react-router-dom";
 
 const ProfileRightBar = () => {
   return (
     <div className="profileRightBar">
       <div className="profileRightBarHeading">
         <span className="profileRightBarTitle">User Information</span>
-        <span className="editButton">Edit Profile</span>
+        <Link to={"/profile/userId/edit"} style={{ textDecoration: "none" }}>
+          <span className="editButton">Edit Profile</span>
+        </Link>
       </div>
 
       <div className="profileRightBarInfo">
