@@ -2,13 +2,10 @@
   width: 100vw;
   height: 100vh;
   background-color: #d4d9e7;
-  // background-image: url("../../../assets/images/chitchat/bg-01.png") ;
-  // background: url("../../../assets/images/chitchat/bg-01.png") no-repeat center
-  // center / cover;
-
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1000;
 
   .registerWrapper {
     width: 80%;
@@ -20,7 +17,12 @@
       flex: 1;
       margin: 0 20px;
       justify-content: center;
+      align-items: center;
 
+      .chitChatLogo {
+        height: 150px;
+        width: 160px;
+      }
       .registerLogo {
         font-size: 60px;
         font-weight: 800;
@@ -29,7 +31,9 @@
       }
 
       .registerDesc {
+        width: 100%;
         font-size: 28px;
+        text-align: center;
       }
     }
 
@@ -102,9 +106,16 @@
 // Responsive
 
 @media only screen and (max-width: 568px) {
-  .registerWrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  .register {
+    padding-top: 10px;
+    .registerWrapper {
+      display: flex;
+      flex-direction: column;
+      .registerLeft {
+        .registerDesc {
+          display: none;
+        }
+      }
+    }
   }
 }

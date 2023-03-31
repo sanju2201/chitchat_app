@@ -1,32 +1,32 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./register.scss";
 import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
 import { Link } from "react-router-dom";
 import DefaultProfile from "../../../assets/images/other/DefaultProfile.jpg";
 import { useState } from "react";
-import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../../firebase";
+import logo from "../../../assets/images/chitchat/logo.png";
+import { useUserContext } from "../../../context/UserContext";
 
 const Register = () => {
-  const [img, setImg] = useState(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
 
-  const handleRegister = async (e) => {
+  const { registerUser } = useUserContext();
+
+  const onSubmit = (e) => {
     e.preventDefault();
-    try {
-      const user = await createUserWithEmailAndPassword(auth, email, password);
-    } catch (err) {
-      setError(true);
-    }
+
+    if (email && password && name) registerUser(email, password, name);
   };
 
   return (
     <div className="register">
       <div className="registerWrapper">
         <div className="registerLeft">
+          <img src={logo} alt="" className="chitChatLogo" />
           <h3 className="registerLogo">ChitChat</h3>
           <span className="registerDesc">
             Connect with friends and the world around you on ChitChat.
@@ -34,9 +34,10 @@ const Register = () => {
         </div>
         <div className="registerRight">
           <div className="registerBox">
-            <form className="rgisterForm" onSubmit={handleRegister}>
+            <form className="rgisterForm" onSubmit={onSubmit}>
               <input
                 type="text"
+                value={name}
                 placeholder="Username"
                 id="username"
                 className="registerInput"
@@ -47,6 +48,7 @@ const Register = () => {
                 type="email"
                 placeholder="Email"
                 id="email"
+                value={email}
                 className="registerInput"
                 required
                 onChange={(e) => setEmail(e.target.value)}
@@ -55,6 +57,7 @@ const Register = () => {
                 type="password"
                 placeholder="Password"
                 id="password"
+                value={password}
                 className="registerInput"
                 required
                 onChange={(e) => setPassword(e.target.value)}

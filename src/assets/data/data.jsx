@@ -36,6 +36,18 @@ import post13 from "../images/posts/post13.jpg";
 import post14 from "../images/posts/post14.jpg";
 import post15 from "../images/posts/post15.jpg";
 
+import reel1 from "../images/reels/reels1.jpg";
+import reel2 from "../images/reels/reels2.jpg";
+import reel3 from "../images/reels/reels3.jpg";
+import reel4 from "../images/reels/reels4.jpg";
+import reel5 from "../images/reels/reels5.jpg";
+import reel6 from "../images/reels/reels6.jpg";
+import reel7 from "../images/reels/reels7.jpg";
+import reel8 from "../images/reels/reels8.jpg";
+import reel9 from "../images/reels/reels9.jpg";
+import reel10 from "../images/reels/reels10.jpg";
+import reel11 from "../images/reels/reels11.jpg";
+
 export const Users = [
   {
     id: 1,
@@ -295,5 +307,52 @@ export const Posts = [
     date: "1 year ago",
     like: "48",
     comment: "7",
+  },
+];
+
+export const reels = [
+  {
+    image: reel1,
+    name: "Lizal",
+  },
+  {
+    image: reel2,
+    name: "Suzlon",
+  },
+  {
+    image: reel3,
+    name: "Alena",
+  },
+  {
+    image: reel4,
+    name: "mantize",
+  },
+  {
+    image: reel5,
+    name: "Ompha",
+  },
+  {
+    image: reel6,
+    name: "Luzel",
+  },
+  {
+    image: reel7,
+    name: "alizz",
+  },
+  {
+    image: reel8,
+    name: "seniorita",
+  },
+  {
+    image: reel9,
+    name: "Lili",
+  },
+  {
+    image: reel10,
+    name: "Gomez",
+  },
+  {
+    image: reel11,
+    name: "Alianana",
   },
 ];

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import React, { useContext } from "react";
 import "./sidebar.scss";
 import MenuItem from "../menuItem/MenuItem";
@@ -21,7 +22,14 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
-        <MenuItem Icon={<DynamicFeedIcon />} text="Feed" />
+        <Link
+          to="/reels"
+          style={{ textDecoration: "none", color: "none" }}
+          className="reelsLink"
+        >
+          <MenuItem Icon={<DynamicFeedIcon />} text="Reels"></MenuItem>
+        </Link>
+
         <MenuItem Icon={<ChatIcon />} text="Chats" />
         <MenuItem Icon={<VideocamIcon />} text="Watch" />
         <MenuItem Icon={<Diversity3Icon />} text="Friends" />

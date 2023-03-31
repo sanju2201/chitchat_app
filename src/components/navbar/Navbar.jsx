@@ -31,7 +31,9 @@ const Navbar = () => {
       </div>
       <div className="navbarRight">
         <div className="navbarLinks">
-          <span className="navbarLink">Home</span>
+          <Link to={"/"} style={{ textDecoration: "none", color: "white" }}>
+            <span className="navbarLink">Home</span>
+          </Link>
           <span className="navbarLink">Timeline</span>
         </div>
         <div className="navbarIcons">
