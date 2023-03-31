@@ -9,24 +9,37 @@ import Register from "./components/pages/register/Register";
 import Home from "./components/pages/home/Home";
 import Profile from "./components/pages/profile/Profile";
 import EditProfile from "./components/pages/editProfile/EditProfile";
+import Feed from './components/feed/Feed';
+import Reels from './components/pages/reels/Reels';
+import { useUserContext } from './context/UserContext';
+
+
+
 
 function App() {
+  const { user, loading, error } = useUserContext();
   const { darkMode } = useContext(DarkModeContext);
   return (
     <div className={darkMode ? "app dark" : "app"}>
       <BrowserRouter>
         <Routes>
-          <Route path="/">
-            <Route path="login" element={<Login />} />
-            <Route path="register" element={<Register />} />
-            <Route index element={<Home />} />
-            <Route path="profile">
+          <Route >
+            <Route path='/' element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/reels" element={<Reels />} />
+            <Route path="/profile">
               <Route path=":userId" element={<Profile />} />
               <Route path=":userId/edit" element={<EditProfile />} />
             </Route>
           </Route>
         </Routes>
       </BrowserRouter>
+
+
+      {error && <p className="error">{error}</p>}
+      {loading ? <h2>Loading...</h2> : <> {user ? <Home /> : <Login />} </>}
+
     </div>
   );
 };
