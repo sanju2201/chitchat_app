@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="https://chitchat-app-v-0.netlify.app/">
-    <img src="https://github.com/sanju2201/chitchat_app/blob/master/src/assets/images/chitchat/logo_t.png?raw=true" alt="Logo" width="80" height="80">
+    <img src="https://github.com/sanju2201/chitchat_app/blob/master/src/assets/images/chitchat/logo_t.png?raw=true" alt="Logo" width="120" height="80">
   </a>
 
   <h3 align="center">ChitChat</h3>
@@ -15,25 +15,11 @@
   </p>
 </div>
 
-<!-- TABLE OF CONTENTS --
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#problem-statement">Problem Statement</a>
-    </li>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-    </li>
-    <li><a href="#module">Mudule Usages</a></li>
-    <li><a href="#contributing">Contributors</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ol>
-</details>
-
 <!-- ABOUT THE PROJECT -->
 
 ## Problem Statement
+
+Design a social networking platform that includes profiles, reels, and sharing features.
 
 In today's digital age, social media has become an integral part of people's lives. With the rise of social media platforms like Facebook, Twitter, Instagram, TikTok, and more, people have more ways to connect with each other, share their thoughts and experiences, and discover new things. However, many social media apps have become overcrowded and less user-friendly, leading to a need for a new social media app that addresses these issues and provides a better user experience. Therefore, there is a need to build a social media app that is user-friendly, innovative, and engaging for users of all ages and backgrounds.
 
