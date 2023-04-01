@@ -15,6 +15,7 @@
   </p>
 </div>
 
+<h1 align="center">Team- ZETA</h1>
 <!-- ABOUT THE PROJECT -->
 
 ## Problem Statement
