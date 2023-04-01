@@ -43,7 +43,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 - [![React][react.js]][react-url]
 - [![Bootstrap][bootstrap.com]][bootstrap-url]
-- ### [@Materail-ui]
+- ### [Materail-ui]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
