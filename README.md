@@ -56,11 +56,11 @@ This all Modules are used by the Team members to build this project successfully
 
 <!-- CONTRIBUTING -->
 
+## Contribution
+
+Congratulations to the contibutors of Team- Zeta. There contributions make this app **greatly appreciatable**.
+
 ## Contributors
-
-Contributions to the contibutors of Team- Zeta. There contributions make this app **greatly appreciatable**.
-
-## Team Membes
 
 ## Ritu
 
