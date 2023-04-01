@@ -41,8 +41,8 @@ Join us today and experience the power of social media done right. Download Chit
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-- [![React][react.js]][react-url]
-- [![Bootstrap][bootstrap.com]][bootstrap-url]
+- ### [React.js]
+- ### [Bootstrap]
 - ### [Materail-ui]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
