@@ -62,7 +62,8 @@ Contributions to the contibutors of Team- Zeta. There contributions make this ap
 
 ## Team Membes
 
-- # Ritu
+## Ritu
+
 - Responsible for adding **Reels** feature, that is one of the cool feature of this app.
 - Resposible for adding **Dark/Light** mode feature to this app.
 
