@@ -46,6 +46,7 @@ const Sidebar = () => {
         <button className="sidebarButton">Show More</button>
         <hr className="sidebarHr" />
 
+        <h4 style={{ marginBottom: "10px" }}>Friend List</h4>
         <ul className="sidebarFriendList">
           {Users.map((user) => (
             <Friends key={user.id} user={user} />
