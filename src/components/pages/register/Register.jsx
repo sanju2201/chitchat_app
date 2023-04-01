@@ -12,13 +12,11 @@ const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(false);
 
   const { registerUser } = useUserContext();
 
   const onSubmit = (e) => {
     e.preventDefault();
-
     if (email && password && name) registerUser(email, password, name);
   };
 
@@ -65,16 +63,16 @@ const Register = () => {
               <button type="submit" className="registerButton">
                 Sign Up
               </button>
-              <Link to="/login">
+              <Link to="/">
                 <button className="loginRegisterButton">
                   Log into Account
                 </button>
               </Link>
-              {error && (
+              {/* {error && (
                 <span style={{ color: "red", fontSize: "12px" }}>
                   *Something went wrong
                 </span>
-              )}
+              )} */}
             </form>
           </div>
         </div>

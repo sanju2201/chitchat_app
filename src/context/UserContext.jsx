@@ -81,6 +81,7 @@ export const UserContextProvider = ({ children }) => {
 
   const contextValue = {
     user,
+    auth,
     loading,
     error,
     signInPage,

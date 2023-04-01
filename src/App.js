@@ -2,7 +2,7 @@ import './app.scss';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./dark.scss";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
 import Login from "./components/pages/login/Login";
 import Register from "./components/pages/register/Register";
@@ -12,35 +12,38 @@ import EditProfile from "./components/pages/editProfile/EditProfile";
 import Feed from './components/feed/Feed';
 import Reels from './components/pages/reels/Reels';
 import { useUserContext } from './context/UserContext';
-
-
+import { UserContextProvider } from './context/UserContext';
+import { useAuthState } from "react-firebase-hooks/auth";
 
 
 function App() {
-  const { user, loading, error } = useUserContext();
+  const { auth } = useUserContext();
+  const [user, loading, error] = useAuthState(auth);
+  console.log(user, loading, error)
   const { darkMode } = useContext(DarkModeContext);
+
+  useEffect(() => {
+    console.log("RERENDER")
+  }, [user])
   return (
-    <div className={darkMode ? "app dark" : "app"}>
-      <BrowserRouter>
-        <Routes>
-          <Route >
-            <Route path='/' element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/reels" element={<Reels />} />
-            <Route path="/profile">
-              <Route path=":userId" element={<Profile />} />
-              <Route path=":userId/edit" element={<EditProfile />} />
+    <UserContextProvider>
+      <div className={darkMode ? "app dark" : "app"}>
+        <BrowserRouter>
+          <Routes>
+            <Route >
+              <Route path='/' element={<Home />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/reels" element={<Reels />} />
+              <Route path="/profile">
+                <Route path=":userId" element={<Profile />} />
+                <Route path=":userId/edit" element={<EditProfile />} />
+              </Route>
             </Route>
-          </Route>
-        </Routes>
-      </BrowserRouter>
-
-
-      {error && <p className="error">{error}</p>}
-      {loading ? <h2>Loading...</h2> : <> {user ? <Home /> : <Login />} </>}
-
-    </div>
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </UserContextProvider>
   );
 };
 
