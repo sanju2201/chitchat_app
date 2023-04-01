@@ -4,6 +4,8 @@ import myStory from "../../assets/images/person/friend6.jpg";
 import addStory from "../../assets/images/other/upload.png";
 import StoryCard from "../storyCard/StoryCard";
 import { Users } from "../../assets/data/data";
+
+// Stories Component shows user stories on the home page
 const Stories = () => {
   return (
     <div className="stories">

@@ -56,11 +56,9 @@ This all Modules are used by the Team members to build this project successfully
 
 <!-- CONTRIBUTING -->
 
-## Contribution
+## Contributors
 
 Congratulations to the contibutors of Team- Zeta. There contributions make this app **greatly appreciatable**.
-
-## Contributors
 
 ## Ritu
 

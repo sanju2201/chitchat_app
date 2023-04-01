@@ -5,6 +5,7 @@ import Stories from "../stories/Stories";
 import "./feed.scss";
 import { Posts } from "../../assets/data/data";
 
+// Feed Component to add users feed to the application
 const Feed = () => {
   return (
     <div className="feed">

@@ -6,6 +6,7 @@ import PermMediaIcon from "@mui/icons-material/PermMedia";
 import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
 import { Close } from "@mui/icons-material";
 
+// Share component allows user to add post and share that to feed area
 const Share = () => {
   const [file, setFile] = useState(null);
   const removeImg = () => {

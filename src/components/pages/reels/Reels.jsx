@@ -4,6 +4,7 @@ import Navbar from "../../navbar/Navbar";
 import "./reels.scss";
 import Slider from "./Slider";
 
+// Reels Component for Showing Reels to users
 const Reels = () => {
   return (
     <div className="reels">

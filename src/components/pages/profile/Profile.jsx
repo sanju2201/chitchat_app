@@ -8,6 +8,7 @@ import Feed from "../../feed/Feed";
 import Rightbar from "../../rightbar/Rightbar";
 import { userVar } from "../editProfile/EditProfile";
 
+// User Profile Component, consit of Navigation bar, side bar and user profile
 const Profile = () => {
   return (
     <div className="profile">

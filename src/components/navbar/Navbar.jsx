@@ -8,6 +8,7 @@ import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import { Link } from "react-router-dom";
 
+// Application Navigation bar allowing user to navigate on diffrent pages
 const Navbar = () => {
   return (
     <div className="navbarContainer">
