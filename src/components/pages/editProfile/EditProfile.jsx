@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../../navbar/Navbar";
 import Sidebar from "../../sidebar/Sidebar";
 import "./editProfile.scss";
@@ -7,8 +7,28 @@ import profile from "../../../assets/images/person/friend6.jpg";
 import editProfile from "../../../assets/images/other/DefaultProfile.jpg";
 import { DriveFolderUploadOutlined } from "@mui/icons-material";
 import { Link } from "react-router-dom";
+let userVar = {};
 
 const EditProfile = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [username, setUserName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
+  const [country, setCountry] = useState("");
+  const [relation, setRelation] = useState("");
+  const [profession, setProfession] = useState("");
+
+  userVar = {
+    name,
+    email,
+    username,
+    phone,
+    address,
+    country,
+    relation,
+    profession,
+  };
   return (
     <div className="editProfile">
       <Navbar />
@@ -21,8 +41,12 @@ const EditProfile = () => {
               <img src={profile} alt="" className="profileUserImg" />
             </div>
             <div className="profileInfo">
-              <h4 className="profileInfoName"> Sam Junior</h4>
-              <span className="profileInfoDes">Full Stack Developer</span>
+              <h4 className="profileInfoName">
+                {name === "" ? " Sam Junior" : name}
+              </h4>
+              <span className="profileInfoDes">
+                {profession === "" ? "Full Stack Developer" : profession}
+              </span>
             </div>
           </div>
           <div className="profileRightBottom">
@@ -43,7 +67,12 @@ const EditProfile = () => {
                   </div>
                   <div className="forInput">
                     <label htmlFor="name">Name: </label>
-                    <input type="text" id="name" placeholder=" Sam Junior" />
+                    <input
+                      type="text"
+                      id="name"
+                      placeholder=" Sam Junior"
+                      onChange={(e) => setName(e.target.value)}
+                    />
                   </div>
                   <div className="forInput">
                     <label htmlFor="username">Username: </label>
@@ -51,14 +80,25 @@ const EditProfile = () => {
                       type="text"
                       id="username"
                       placeholder=" SamJunior_22"
+                      onChange={(e) => setUserName(e.target.value)}
                     />
                   </div>
                   <div className="forInput">
-                    <label htmlFor="email">Name: </label>
+                    <label htmlFor="profession">Profession: </label>
+                    <input
+                      type="text"
+                      id="profession"
+                      placeholder=" Full Stack Developer"
+                      onChange={(e) => setProfession(e.target.value)}
+                    />
+                  </div>
+                  <div className="forInput">
+                    <label htmlFor="email">Email: </label>
                     <input
                       type="email"
                       id="email"
                       placeholder=" example@gmail.com"
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
                   <div className="forInput">
@@ -67,6 +107,7 @@ const EditProfile = () => {
                       type="text"
                       id="phone"
                       placeholder=" +91 8569452536"
+                      onChange={(e) => setPhone(e.target.value)}
                     />
                   </div>
                   <div className="forInput">
@@ -75,11 +116,26 @@ const EditProfile = () => {
                       type="text"
                       id="address"
                       placeholder="Newton School, Banguluru"
+                      onChange={(e) => setAddress(e.target.value)}
                     />
                   </div>
                   <div className="forInput">
                     <label htmlFor="country">Country: </label>
-                    <input type="text" id="country" placeholder="India" />
+                    <input
+                      type="text"
+                      id="country"
+                      placeholder="India"
+                      onChange={(e) => setCountry(e.target.value)}
+                    />
+                  </div>
+                  <div className="forInput">
+                    <label htmlFor="relation">Relationship: </label>
+                    <input
+                      type="text"
+                      id="relation"
+                      placeholder="Single"
+                      onChange={(e) => setRelation(e.target.value)}
+                    />
                   </div>
                   <Link to={"/profile/userId"}>
                     <button type="submit" className="updateProfile">
@@ -96,4 +152,5 @@ const EditProfile = () => {
   );
 };
 
+export { userVar };
 export default EditProfile;

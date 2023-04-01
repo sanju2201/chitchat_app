@@ -6,6 +6,7 @@ import profileCover from "../../../assets/images/profilebackground/back4.jpg";
 import profile from "../../../assets/images/person/friend6.jpg";
 import Feed from "../../feed/Feed";
 import Rightbar from "../../rightbar/Rightbar";
+import { userVar } from "../editProfile/EditProfile";
 
 const Profile = () => {
   return (
@@ -20,8 +21,17 @@ const Profile = () => {
               <img src={profile} alt="" className="profileUserImg" />
             </div>
             <div className="profileInfo">
-              <h4 className="profileInfoName"> Sam Junior</h4>
-              <span className="profileInfoDes">Full Stack Developer</span>
+              <h4 className="profileInfoName" placeholder=" Sam Junior">
+                {userVar.name === "" ? "Sam Junior" : userVar.name}
+              </h4>
+              <span
+                className="profileInfoDes"
+                placeholder="Full Stack Developer"
+              >
+                {userVar.profession === ""
+                  ? "Full Stack Developer"
+                  : userVar.profession}
+              </span>
             </div>
           </div>
           <div className="profileRightBottom">
