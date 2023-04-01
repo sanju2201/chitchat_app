@@ -5,7 +5,7 @@
     <img src="https://github.com/sanju2201/chitchat_app/blob/master/src/assets/images/chitchat/logo_t.png?raw=true" alt="Logo" width="110" height="80">
   </a>
 
-  <h2 align="center">ChitChat</h2>
+  <h1 align="center">ChitChat</h1>
 
   <p align="center">
     An awesome Social media Platform to connect with friends and family
