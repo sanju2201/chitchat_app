@@ -23,15 +23,13 @@ const Profile = () => {
             </div>
             <div className="profileInfo">
               <h4 className="profileInfoName" placeholder=" Sam Junior">
-                {userVar.name === "" ? "Sam Junior" : userVar.name}
+                {"Sam Junior"}
               </h4>
               <span
                 className="profileInfoDes"
                 placeholder="Full Stack Developer"
               >
-                {userVar.profession === ""
-                  ? "Full Stack Developer"
-                  : userVar.profession}
+                {"Full Stack Developer"}
               </span>
             </div>
           </div>

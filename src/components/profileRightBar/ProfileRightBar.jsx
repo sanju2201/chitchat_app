@@ -18,52 +18,29 @@ const ProfileRightBar = () => {
       <div className="profileRightBarInfo">
         <div className="profileRightBarInfoItem">
           <span className="profileRightBarItemKey">Username: </span>
-          <span className="profileRightBarItemValue" placeholder="SamJunior_22">
-            {userVar.username === "" || null
-              ? "SamJunior_22"
-              : userVar.username}
-          </span>
+          <span className="profileRightBarItemValue">Sam_22</span>
         </div>
         <div className="profileRightBarInfoItem">
           <span className="profileRightBarItemKey">Phone Number: </span>
-          <span
-            className="profileRightBarItemValue"
-            placeholder="+91 8047274865"
-          >
-            {userVar.phone === "" ? "+91 8047274865" : userVar.phone}
-          </span>
+          <span className="profileRightBarItemValue">+91 7894561230</span>
         </div>
         <div className="profileRightBarInfoItem">
           <span className="profileRightBarItemKey">Email: </span>
-          <span
-            className="profileRightBarItemValue"
-            placeholder="+91 8047274865"
-          >
-            {userVar.email === "" ? "example@gmail.com" : userVar.email}
-          </span>
+          <span className="profileRightBarItemValue">sam@gmail.com</span>
         </div>
         <div className="profileRightBarInfoItem">
           <span className="profileRightBarItemKey">Address: </span>
-          <span
-            className="profileRightBarItemValue"
-            placeholder="Newton School, Bangaluru"
-          >
-            {userVar.address === ""
-              ? "Newton School, Bangaluru"
-              : userVar.address}
+          <span className="profileRightBarItemValue">
+            Newton School, Bangalore
           </span>
         </div>
         <div className="profileRightBarInfoItem">
           <span className="profileRightBarItemKey">Country: </span>
-          <span className="profileRightBarItemValue" placeholder="India">
-            {userVar.country === "" ? "India" : userVar.country}
-          </span>
+          <span className="profileRightBarItemValue">India</span>
         </div>
         <div className="profileRightBarInfoItem">
           <span className="profileRightBarItemKey">Relationship: </span>
-          <span className="profileRightBarItemValue" placeholder="Single">
-            {userVar.relation === "" ? "Single" : userVar.relation}
-          </span>
+          <span className="profileRightBarItemValue">In a Relationship</span>
         </div>
       </div>
       <h4 className="profileRightBarTitle"> Close Friends</h4>

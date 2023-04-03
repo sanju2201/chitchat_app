@@ -10,14 +10,14 @@ import { Link } from "react-router-dom";
 let userVar = {};
 
 const EditProfile = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [username, setUserName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [address, setAddress] = useState("");
-  const [country, setCountry] = useState("");
-  const [relation, setRelation] = useState("");
-  const [profession, setProfession] = useState("");
+  const [name, setName] = useState("Sam Junior");
+  const [email, setEmail] = useState("example@gmail.com");
+  const [username, setUserName] = useState("Sam_22");
+  const [phone, setPhone] = useState("+91 7894561230");
+  const [address, setAddress] = useState("Bangalore, Karnataka");
+  const [country, setCountry] = useState("India");
+  const [relation, setRelation] = useState("Single");
+  const [profession, setProfession] = useState("Developer");
 
   userVar = {
     name,
@@ -41,12 +41,8 @@ const EditProfile = () => {
               <img src={profile} alt="" className="profileUserImg" />
             </div>
             <div className="profileInfo">
-              <h4 className="profileInfoName">
-                {name === "" ? " Sam Junior" : name}
-              </h4>
-              <span className="profileInfoDes">
-                {profession === "" ? "Full Stack Developer" : profession}
-              </span>
+              <h4 className="profileInfoName">{name}</h4>
+              <span className="profileInfoDes">{profession}</span>
             </div>
           </div>
           <div className="profileRightBottom">

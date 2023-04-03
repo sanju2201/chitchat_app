@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./slider.scss";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
+
+
 const Slider = ({ reels }) => {
   const [current, setCurrent] = useState(0);
   const length = reels.length;
