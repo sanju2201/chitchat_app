@@ -31,7 +31,14 @@ const Sidebar = () => {
         </Link>
 
         <MenuItem Icon={<ChatIcon />} text="Chats" />
-        <MenuItem Icon={<VideocamIcon />} text="Watch" />
+       
+        <Link
+          to="/watch"
+          style={{ textDecoration: "none", color: "inherit" }}
+          className="watchlink"
+        >
+          <MenuItem Icon={<VideocamIcon />} text="Watch" />
+        </Link>
         <MenuItem Icon={<Diversity3Icon />} text="Friends" />
         <MenuItem Icon={<BookmarkIcon />} text="Bookmarks" />
         <MenuItem Icon={<StorefrontIcon />} text="Marketplace" />
