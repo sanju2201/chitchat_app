@@ -7,6 +7,14 @@
   .sidebarWrapper {
     padding: 20px;
 
+    a.active {
+      .menuItem{
+        background-color: #011631;
+        color: white
+      }
+    }
+
+
     .sidebarButton {
       background-color: #011631;
       color: white;

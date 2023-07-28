@@ -1,28 +1,45 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./login.scss";
 import logo from "../../../assets/images/chitchat/logo.png";
 import { useUserContext } from "../../../context/UserContext";
+import {
+  auth,
+  db,
+  googleProvider,
+  facebookProvider,
+  signInWithPopup,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  sendPasswordResetEmail,
+  signOut,
+  onAuthStateChanged,
+} from "./../../auth/firebase";
 
 const Login = () => {
-  const emailRef = useRef();
-  const psdRef = useRef();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const { signInUser, forgotPassword } = useUserContext();
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    const email = emailRef.current.value;
-    const password = psdRef.current.value;
-    if (email && password) signInUser(email, password);
+    try {
+      const res = await signInWithEmailAndPassword(auth, email, password);
+      console.log(res);
+      setEmail("");
+      setPassword("");
+    } catch (err) {
+      alert(err);
+    }
   };
 
-  const forgotPasswordHandler = () => {
-    const email = emailRef.current.value;
-    if (email)
-      forgotPassword(email).then(() => {
-        emailRef.current.value = "";
-      });
-  };
+  // const forgotPasswordHandler = () => {
+  //   const email = emailRef.current.value;
+  //   if (email)
+  //     forgotPassword(email).then(() => {
+  //       emailRef.current.value = "";
+  //     });
+  // };
 
   return (
     <div className="login">
@@ -39,10 +56,11 @@ const Login = () => {
             <div className="bottom">
               <form className="bottomBox" onSubmit={onSubmit}>
                 <input
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   type="email"
                   placeholder="Email"
                   id="email"
-                  ref={emailRef}
                   className="loginInput"
                   required
                 />
@@ -50,7 +68,8 @@ const Login = () => {
                   type="password"
                   placeholder="Password"
                   id="password"
-                  ref={psdRef}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   className="loginInput"
                   required
                 />
@@ -63,7 +82,7 @@ const Login = () => {
                     Create a New Account
                   </button>
                 </Link>
-                <p onClick={forgotPasswordHandler}>Forgot Password?</p>
+                {/* <p onClick={forgotPasswordHandler}>Forgot Password?</p> */}
               </form>
             </div>
           </div>

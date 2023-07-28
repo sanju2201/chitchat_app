@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import React, { useContext } from "react";
 import "./sidebar.scss";
 import MenuItem from "../menuItem/MenuItem";
@@ -15,44 +15,113 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 import Friends from "../friends/Friends";
 import { Users } from "../../assets/data/data";
 import { DarkModeContext } from "../../context/darkModeContext";
-console.log(Users);
+import HomeIcon from '@mui/icons-material/Home';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 const Sidebar = () => {
   const { darkMode, dispatch } = useContext(DarkModeContext);
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
-        <Link
+        <NavLink
+          to="/"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active" : ""
+          }
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          <MenuItem Icon={<HomeIcon />} text="Home"></MenuItem>
+        </NavLink>
+
+        <NavLink
+          to={"/profile/userId"}
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active" : ""
+          }
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          <MenuItem Icon={<AccountCircleIcon />} text="Profile"></MenuItem>
+        </NavLink>
+
+        <NavLink
           to="/reels"
-          style={{ textDecoration: "none", color: "none" }}
-          className="reelsLink"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active" : ""
+          }
+          style={{ textDecoration: "none", color: "inherit" }}
         >
           <MenuItem Icon={<DynamicFeedIcon />} text="Reels"></MenuItem>
-        </Link>
+        </NavLink>
 
-        <MenuItem Icon={<ChatIcon />} text="Chats" />
-       
-        <Link
+        <NavLink
           to="/watch"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active" : ""
+          }
           style={{ textDecoration: "none", color: "inherit" }}
-          className="watchlink"
         >
-          <MenuItem Icon={<VideocamIcon />} text="Watch" />
-        </Link>
-        <MenuItem Icon={<Diversity3Icon />} text="Friends" />
-        <MenuItem Icon={<BookmarkIcon />} text="Bookmarks" />
-        <MenuItem Icon={<StorefrontIcon />} text="Marketplace" />
-        <MenuItem Icon={<EventIcon />} text="Events" />
+          <MenuItem Icon={<VideocamIcon />} text="Watch"></MenuItem>
+        </NavLink>
+
+        <NavLink
+          to="/friends"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active" : ""
+          }
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          <MenuItem Icon={<Diversity3Icon />} text="Friends" />
+        </NavLink>
+
+        {/* <NavLink
+          to="/bookmarks"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active" : ""
+          }
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          <MenuItem Icon={<BookmarkIcon />} text="Bookmarks" />
+        </NavLink> */}
+
+        {/* <NavLink
+          to="/marketplace"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active" : ""
+          }
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          <MenuItem Icon={<StorefrontIcon />} text="Marketplace" />
+        </NavLink> */}
+
+        {/* <NavLink
+          to="/events"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active" : ""
+          }
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          <MenuItem Icon={<EventIcon />} text="Events" />
+        </NavLink> */}
+
         <span onClick={() => dispatch({ type: "TOGGLE" })}>
           <MenuItem
             Icon={darkMode ? <LightModeIcon /> : <DarkModeIcon />}
             text={darkMode ? "Light" : "Dark"}
           />
         </span>
-        <MenuItem Icon={<ExitToAppIcon />} text="Logout" />
-        <button className="sidebarButton">Show More</button>
-        <hr className="sidebarHr" />
+        <NavLink
+          to="/login"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active" : ""
+          }
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          <MenuItem Icon={<ExitToAppIcon />} text="Logout" />
+        </NavLink>
 
+        {/* <MenuItem Icon={<ChatIcon />} text="Chats" /> */}
+        {/* <button className="sidebarButton">Show More</button> */}
+        <hr className="sidebarHr" />
         <h4 style={{ marginBottom: "10px" }}>Friend List</h4>
         <ul className="sidebarFriendList">
           {Users.map((user) => (

@@ -85,6 +85,238 @@ export const Users = [
   //   profilePicture: friend20,
   // },
 ];
+export const FriendsList = [
+  {
+    id: 0,
+    name: "Suzzy denial",
+    username: "SuzDev",
+    email: "Suzzye@april.biz",
+    profilePicture: "https://images.unsplash.com/photo-1530021232320-687d8e3dba54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjc2fHxwZW9wbGV8ZW58MHwxfDB8fHww&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 1,
+    name: "Leanne Graham",
+    username: "Gloria",
+    email: "Sincere@april.biz",
+    profilePicture: "https://images.unsplash.com/photo-1489913590284-9269438bb411?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjUwfHxwZW9wbGV8ZW58MHwxfDB8fHww&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 2,
+    name: "Ervin Howell",
+    username: "Madison",
+    email: "Shanna@melissa.tv",
+    profilePicture: "https://images.unsplash.com/photo-1524638431109-93d95c968f03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjQyfHxwZW9wbGV8ZW58MHwxfDB8fHww&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 3,
+    name: "Clementine",
+    username: "Abigail",
+    email: "Nathan@yesenia.net",
+    profilePicture: "https://images.unsplash.com/photo-1520975916090-3105956dac38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjA2fHxwZW9wbGV8ZW58MHwxfDB8fHww&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 4,
+    name: "Paicia Lesack",
+    username: "Sophia",
+    email: "Julianne.OConner@kory.org",
+    profilePicture: "https://images.unsplash.com/photo-1495366691023-cc4eadcc2d7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTk3fHxwZW9wbGV8ZW58MHwxfDB8fHww&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 5,
+    name: "Chelsey Dietrich",
+    username: "Marilyn",
+    email: "Lucio_Hettinger@annie.ca",
+    profilePicture: "https://images.unsplash.com/photo-1526413138270-8e3dedaecf19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTkyfHxwZW9wbGV8ZW58MHwxfDB8fHww&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 6,
+    name: "Mrs. Dennis",
+    username: "Doris",
+    email: "Karley_Dach@jasper.info",
+    profilePicture: "https://images.unsplash.com/photo-1529111290557-82f6d5c6cf85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTgwfHxwZW9wbGV8ZW58MHwxfDB8fHww&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 7,
+    name: "Kurtis Weissnat",
+    username: "Rachel",
+    email: "Telly.Hoeger@billy.biz",
+    profilePicture: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTc0fHxwZW9wbGV8ZW58MHwxfDB8fHww&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 8,
+    name: "Nicholas Runolf",
+    username: "Victoria",
+    email: "Sherwood@rosamond.me",
+    profilePicture: "https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTY4fHxwZW9wbGV8ZW58MHwxfDB8fHww&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 9,
+    name: "Catherine",
+    username: "Maria",
+    email: "Chaim_McDermott@dana.io",
+    profilePicture: "https://images.unsplash.com/photo-1525983360072-2ebda055ba40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTY2fHxwZW9wbGV8ZW58MHwxfDB8fHww&auto=format&fit=crop&w=500&q=60",
+  },
+  {
+    id: 10,
+    name: "Clementina ",
+    username: "Theresa",
+    email: "Rey.Padberg@karina.biz",
+    profilePicture: "https://images.unsplash.com/photo-1521567097888-2c5fc40a8660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTUyfHxwZW9wbGV8ZW58MHwxfDB8fHww&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 11,
+    name: "Sharon Mattew",
+    username: "Charlotte",
+    email: "Rey.Padberg@karina.biz",
+    profilePicture: "https://images.unsplash.com/photo-1517530094915-500495b15ade?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTQ0fHxwZW9wbGV8ZW58MHwxfDB8fHww&auto=format&fit=crop&w=500&q=60"
+  },
+  { id: 12,
+    name: 'John Doe',
+    email: 'john.doe@example.com',
+    username: 'johndoe',
+    profilePicture: "https://images.unsplash.com/photo-1520975661595-6453be3f7070?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTMxfHxwZW9wbGV8ZW58MHwxfDB8fHww&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 13,
+    name: 'Jane Smith',
+    email: 'jane.smith@example.com',
+    username: 'janesmith',
+    profilePicture: "https://images.unsplash.com/photo-1542596594-649edbc13630?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTMwfHxwZW9wbGV8ZW58MHwxfDB8fHww&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 14,
+    name: 'Michael Johnson',
+    email: 'michael.johnson@example.com',
+    username: 'michaeljohnson',
+    profilePicture: "https://images.unsplash.com/photo-1520975954732-35dd22299614?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzU3fHxwZW9wbGV8ZW58MHwxfDB8fHww&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 15,
+    name: 'Emily Williams',
+    email: 'emily.williams@example.com',
+    username: 'emilywilliams',
+    profilePicture: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTZ8fHBlb3BsZXxlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 16,
+    name: 'Daniel Lee',
+    email: 'daniel.lee@example.com',
+    username: 'daniellee',
+    profilePicture: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTN8fHBlb3BsZXxlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 17,
+    name: 'Olivia Martin',
+    email: 'olivia.martin@example.com',
+    username: 'oliviamartin',
+    profilePicture: "https://images.unsplash.com/photo-1531384441138-2736e62e0919?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODl8fHBlb3BsZXxlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 18,
+    name: 'David Wilson',
+    email: 'david.wilson@example.com',
+    username: 'davidwilson',
+    profilePicture: "https://images.unsplash.com/photo-1542596768-5d1d21f1cf98?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODB8fHBlb3BsZXxlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 19,
+    name: 'Sophia Anderson',
+    email: 'sophia.anderson@example.com',
+    username: 'sophiaanderson',
+    profilePicture: "https://images.unsplash.com/photo-1517256673644-36ad11246d21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzR8fHBlb3BsZXxlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 20,
+    name: 'James Thomas',
+    email: 'james.thomas@example.com',
+    username: 'jamesthomas',
+    profilePicture: "https://images.unsplash.com/photo-1540569014015-19a7be504e3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fHBlb3BsZXxlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 21,
+    name: 'Ava Jackson',
+    email: 'ava.jackson@example.com',
+    username: 'avajackson',
+    profilePicture: "https://images.unsplash.com/photo-1540324155974-7523202daa3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTZ8fHBlb3BsZXxlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 22,
+    name: "Ervin Howell",
+    username: "Madison",
+    email: "Shanna@melissa.tv",
+    profilePicture: "https://images.unsplash.com/photo-1548366565-6bbab241282d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTJ8fHBlb3BsZXxlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 23,
+    name: "Clementineh",
+    username: "Abigail",
+    email: "Nathan@yesenia.net",
+    profilePicture: "https://images.unsplash.com/photo-1539125530496-3ca408f9c2d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDV8fHBlb3BsZXxlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id:24,
+    name: "Patcia Lesack",
+    username: "Sophia",
+    email: "Julianne.OConner@kory.org",
+    profilePicture: "https://images.unsplash.com/photo-1522556189639-b150ed9c4330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fHBlb3BsZXxlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 25,
+    name: "Chelsey Dich",
+    username: "Marilyn",
+    email: "Lucio_Hettinger@annie.ca",
+    profilePicture: "https://images.unsplash.com/photo-1504439904031-93ded9f93e4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fHBlb3BsZXxlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 26,
+    name: "Mrs. Dennis Schulist",
+    username: "Doris",
+    email: "Karley_Dach@jasper.info",
+    profilePicture: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHBlb3BsZXxlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 27,
+    name: "Kurtis Wesnat",
+    username: "Rachel",
+    email: "Telly.Hoeger@billy.biz",
+    profilePicture: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHBlb3BsZXxlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 28,
+    name: "Niclas Runol",
+    username: "Victoria",
+    email: "Sherwood@rosamond.me",
+    profilePicture: "https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cGVvcGxlfGVufDB8MXwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 29,
+    name: "Catherine",
+    username: "Maria",
+    email: "Chaim_McDermott@dana.io",
+    profilePicture: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBlb3BsZXxlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 30,
+    name: "DuBuque",
+    username: "Theresa",
+    email: "Rey.Padberg@karina.biz",
+    profilePicture: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cGVvcGxlfGVufDB8MXwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 31,
+    name: "Sharon Mattew",
+    username: "Charlotte",
+    email: "Rey.Padberg@karina.biz",
+    profilePicture: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVvcGxlfGVufDB8MXwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: 32,
+    name: "Leanne Graham",
+    username: "Gloria",
+    email: "Sincere@april.biz",
+    profilePicture: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVvcGxlfGVufDB8MXwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+  }
+];
 
 export const Usersonline = [
   {

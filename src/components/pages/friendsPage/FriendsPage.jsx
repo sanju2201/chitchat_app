@@ -1,22 +1,20 @@
 import React from "react";
-import { reels } from "../../../assets/data/data";
 import Navbar from "../../navbar/Navbar";
-import "./reels.scss";
-import Slider from "./Slider";
+import "./friendsPage.scss";
 import Sidebar from "../../sidebar/Sidebar";
+import Friends from "./FriendsComp"
 
 // Reels Component for Showing Reels to users
-const Reels = () => {
+const FriendsPage = () => {
   return (
     <div className="reels">
       <Navbar className="nav" />
-      <div className="homeContainer">
+      <div className="homeContainer" style={{display:"flex"}}>
         <Sidebar />
-        <Slider reels={reels} className="sliderInfo" />
+        <Friends />
       </div>
     </div>
   );
 };
 
-export default Reels;
-
+export default FriendsPage;

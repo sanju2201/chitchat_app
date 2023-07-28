@@ -18,8 +18,6 @@ const Slider = ({ reels }) => {
   if (!Array.isArray(reels) || reels.length <= 0) {
     return null;
   }
-
-  console.log(current);
   return (
     <div className="imageSlider">
       <div className="left">

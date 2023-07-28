@@ -9,7 +9,7 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
 } from "firebase/auth";
-import { auth } from "../firebase";
+import { auth } from "./../components/auth/firebase";
 
 export const UserContext = createContext({});
 

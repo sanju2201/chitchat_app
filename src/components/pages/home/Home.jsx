@@ -4,7 +4,6 @@ import Navbar from "../../navbar/Navbar";
 import Sidebar from "../../sidebar/Sidebar";
 import Feed from "../../feed/Feed";
 import Rightbar from "../../rightbar/Rightbar";
-import Watch from "../watch/Watch";
 
 // Home Component of the Application, consist of navigation, and home container for the app.
 const Home = () => {

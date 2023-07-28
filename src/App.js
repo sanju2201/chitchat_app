@@ -14,7 +14,8 @@ import Reels from './components/pages/reels/Reels';
 import { useUserContext } from './context/UserContext';
 import { UserContextProvider } from './context/UserContext';
 import { useAuthState } from "react-firebase-hooks/auth";
-import Watch from './components/pages/watch/Watch';
+import WatchPage from './components/pages/watch/WatchPage';
+import FriendsPage from './components/pages/friendsPage/FriendsPage';
 
 
 function App() {
@@ -31,17 +32,19 @@ function App() {
       <div className={darkMode ? "app dark" : "app"}>
         <BrowserRouter>
           <Routes>
-            <Route >
               <Route path='/' element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/reels" element={<Reels />} />
-              <Route path="/watch" element={<Watch />} />
+              <Route path="/watch" element={<WatchPage />} />
+              <Route path="/friends" element={<FriendsPage />} />
+              <Route path="/bookmarks" element={<Reels />} />
+              <Route path="/marketplace" element={<Reels />} />
+              <Route path="/events" element={<Reels />} />
               <Route path="/profile">
                 <Route path=":userId" element={<Profile />} />
                 <Route path=":userId/edit" element={<EditProfile />} />
               </Route>
-            </Route>
           </Routes>
         </BrowserRouter>
       </div>

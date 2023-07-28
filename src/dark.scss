@@ -18,9 +18,18 @@
     }
   }
 
+  
+
   .sidebar {
     background-color: #111111;
     color: rgb(156, 156, 156);
+
+    a.active {
+      .menuItem{
+        background-color: rgba(98, 97, 97, 0.3);
+        color: white
+      }
+    }
 
     .sidebarButton {
       background-color: rgb(156, 156, 156);
@@ -93,4 +102,23 @@
       }
     }
   }
+
+  .friends_comp{
+    background-color: #111111;
+    
+    .friends_card{
+      background-color: #343434;
+      color: white;
+      
+    }
+  }
+
+  .imageSlider{
+    background-color: #111111;
+  }
+  .watch{
+    background-color: #111111;
+  }
+
+
 }

@@ -4,7 +4,7 @@ import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUpload
 import { Link } from "react-router-dom";
 import DefaultProfile from "../../../assets/images/other/DefaultProfile.jpg";
 import { useState } from "react";
-import { auth } from "../../../firebase";
+import { auth } from "./../../auth/firebase";
 import logo from "../../../assets/images/chitchat/logo.png";
 import { useUserContext } from "../../../context/UserContext";
 
