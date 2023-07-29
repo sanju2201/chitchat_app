@@ -33,17 +33,17 @@ const googleProvider = new GoogleAuthProvider();
 const facebookProvider = new FacebookAuthProvider();
 
 
-onAuthStateChanged(auth, (user) => {
-    if (user) {
-        // User is signed in
-        db.collection("chitchatCollection").add({
-            uid: user.uid,
-            userAgent: navigator.userAgent,
-            language: navigator.language,
-            platform: navigator.platform
-        });
-    }
-});
+// onAuthStateChanged(auth, (user) => {
+//     if (user) {
+//         // User is signed in
+//         db.collection("chitchatCollection").add({
+//             uid: user.uid,
+//             userAgent: navigator.userAgent,
+//             language: navigator.language,
+//             platform: navigator.platform
+//         });
+//     }
+// });
 
 export {
     auth,

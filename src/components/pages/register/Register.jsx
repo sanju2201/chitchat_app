@@ -4,9 +4,20 @@ import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUpload
 import { Link } from "react-router-dom";
 import DefaultProfile from "../../../assets/images/other/DefaultProfile.jpg";
 import { useState } from "react";
-import { auth } from "./../../auth/firebase";
 import logo from "../../../assets/images/chitchat/logo.png";
 import { useUserContext } from "../../../context/UserContext";
+import {
+  auth,
+  db,
+  googleProvider,
+  facebookProvider,
+  signInWithPopup,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  sendPasswordResetEmail,
+  signOut,
+  onAuthStateChanged,
+} from "./../../auth/firebase";
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -14,6 +25,28 @@ const Register = () => {
   const [password, setPassword] = useState("");
 
   const { registerUser } = useUserContext();
+
+  const handleRegister = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await createUserWithEmailAndPassword(auth, email, password);
+      console.log(res);
+      setEmail("");
+      setPassword("");
+    } catch (err) {
+      alert(err);
+    }
+  };
+
+  const signInWithGoogle = async () => {
+    try {
+      const res = await signInWithPopup(auth, googleProvider);
+      console.log(res);
+    } catch (err) {
+      alert(err.message);
+      return false;
+    }
+  };
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -68,11 +101,14 @@ const Register = () => {
                   Log into Account
                 </button>
               </Link>
-              {/* {error && (
-                <span style={{ color: "red", fontSize: "12px" }}>
-                  *Something went wrong
-                </span>
-              )} */}
+              <div className="login__authOption">
+              <img
+                className="login__googleAuth"
+                src="https://media-public.canva.com/MADnBiAubGA/3/screen.svg"
+                alt=""
+              />
+              <p onClick={signInWithGoogle}>Continue With Google</p>
+            </div>
             </form>
           </div>
         </div>

@@ -21,7 +21,17 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const { signInUser, forgotPassword } = useUserContext();
 
-  const onSubmit = async (e) => {
+  const signInWithGoogle = async () => {
+    try {
+      const res = await signInWithPopup(auth, googleProvider);
+      console.log(res);
+    } catch (err) {
+      alert(err.message);
+      return false;
+    }
+  };
+
+  const handleSignIn = async (e) => {
     e.preventDefault();
     try {
       const res = await signInWithEmailAndPassword(auth, email, password);
@@ -32,14 +42,6 @@ const Login = () => {
       alert(err);
     }
   };
-
-  // const forgotPasswordHandler = () => {
-  //   const email = emailRef.current.value;
-  //   if (email)
-  //     forgotPassword(email).then(() => {
-  //       emailRef.current.value = "";
-  //     });
-  // };
 
   return (
     <div className="login">
@@ -54,7 +56,7 @@ const Login = () => {
         <div className="loginRight">
           <div className="loginBox">
             <div className="bottom">
-              <form className="bottomBox" onSubmit={onSubmit}>
+              <form className="bottomBox" onSubmit={handleSignIn}>
                 <input
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -82,7 +84,14 @@ const Login = () => {
                     Create a New Account
                   </button>
                 </Link>
-                {/* <p onClick={forgotPasswordHandler}>Forgot Password?</p> */}
+                <div className="login__authOption">
+                  <img
+                    className="login__googleAuth"
+                    src="https://media-public.canva.com/MADnBiAubGA/3/screen.svg"
+                    alt=""
+                  />
+                  <p onClick={signInWithGoogle}>Continue With Google</p>
+                </div>
               </form>
             </div>
           </div>

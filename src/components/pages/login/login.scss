@@ -53,7 +53,7 @@
         background-color: white;
 
         .loginInput {
-          height: 50px;
+          height: 40px;
           border-radius: 10px;
           padding-left: 20px;
           font-size: 18px;
@@ -65,12 +65,12 @@
         }
 
         .loginButton {
-          height: 50px;
+          height: 40px;
           width: 100%;
           background-color: #011631;
           color: white;
           font-weight: 500;
-          font-size: 23px;
+          font-size: 16px;
           border-radius: 10px;
           border: none;
           margin-bottom: 5px;
@@ -78,16 +78,44 @@
         }
 
         .loginRegisterButton {
-          height: 50px;
+          height: 40px;
           width: 100%;
           background-color: #42b72a;
           color: white;
           font-weight: 500;
-          font-size: 23px;
+          font-size: 16px;
           border-radius: 10px;
           border: none;
           margin-bottom: 5px;
           cursor: pointer;
+        }
+
+        .login__authOption {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          align-items: center;
+          padding: 7px;
+          margin-bottom: 15px;
+          border: 1px solid lightgray;
+          border-radius: 5px;
+          cursor: pointer;
+          height: 40px
+        }
+        
+        .login__authOption:hover {
+          background-color: rgb(226, 226, 226);
+        }
+        
+        .login__authOption > img {
+          height: 30px;
+          object-fit: contain;
+        }
+        
+        .login__authOption > p {
+          margin-left: 11px;
+          font-size: 16px;
+          font-weight: 500;
         }
       }
     }
